@@ -1,0 +1,3 @@
+function metodoParteCentralCuadrada(m,n){
+    
+}
