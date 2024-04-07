@@ -12,3 +12,10 @@ export function getCentro(string){
 export function parsearNro(nro){
     return (`0.${nro}`); 
 }
+
+export function restNro(nro, k){
+    let newArray = Array.from(nro.toString()); 
+    let first = parseInt(newArray.slice(0,k).join("")); 
+    let second = parseInt(newArray.slice(k, newArray.length).join(""));
+   return {first: first, second: second}; 
+}
