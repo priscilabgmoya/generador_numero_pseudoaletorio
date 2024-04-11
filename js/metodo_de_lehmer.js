@@ -14,7 +14,7 @@ function metodoLehmen(n0,t,repeticiones){
     return resultados; 
 }
 let resultados = metodoLehmen(58149,63,5);
-
+console.log("metodo de Lehmer");
 resultados.forEach((res,index)=>{
     console.log(`u[${index+1}]: ${res}`);
 })

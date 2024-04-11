@@ -21,8 +21,8 @@ function metodoParteCentralCuadrada(m,n,repeticiones){
     return resultados; 
 }
 
-let resultados = metodoParteCentralCuadrada(123,3,5)
-
+let resultados = metodoParteCentralCuadrada(7541,3,5)
+console.log("metodo de Parte Central Cuadrada");
 resultados.forEach((res,index)=>{
     console.log(`u[${index+1}]: ${res}`);
 })

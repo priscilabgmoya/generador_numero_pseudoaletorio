@@ -12,8 +12,8 @@ function metodoCongruenciaMixto(a, c, n0, m, repeticiones){
     return resultados; 
 }
 
-let resultados = metodoCongruenciaMixto(5,7,4,8,5); 
-
+let resultados = metodoCongruenciaMixto(1739,893,2170,3135,5); 
+console.log("metodo de Congruencial Mixto");
 resultados.forEach((res,index)=>{
     console.log(`u[${index+1}]: ${res}`);
 })

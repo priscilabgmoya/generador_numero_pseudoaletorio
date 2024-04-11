@@ -12,8 +12,8 @@ function metodoCongruenciaMultiplicativo(a, n0, m, repeticiones){
     return  resultados; 
 }
 
-let resultados = metodoCongruenciaMultiplicativo(5631,1317,547,8); 
-
+let resultados = metodoCongruenciaMultiplicativo(23,151,157,5); 
+console.log("metodo de Congruencial Multiplicativo");
 resultados.forEach((res,index)=>{
     console.log(`u[${index+1}]: ${res}`);
 })
