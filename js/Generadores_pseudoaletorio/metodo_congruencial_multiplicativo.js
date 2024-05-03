@@ -1,4 +1,4 @@
-import { truncar } from "../helpers/helps.js";
+import { truncar } from "../../helpers/helps.js";
 
 function metodoCongruenciaMultiplicativo(a, n0, m, repeticiones){
     let resultados = []; 
@@ -12,7 +12,7 @@ function metodoCongruenciaMultiplicativo(a, n0, m, repeticiones){
     return  resultados; 
 }
 
-let resultados = metodoCongruenciaMultiplicativo(23,151,157,5); 
+let resultados = metodoCongruenciaMultiplicativo(23,151,157,20); 
 console.log("metodo de Congruencial Multiplicativo");
 resultados.forEach((res,index)=>{
     console.log(`u[${index+1}]: ${res}`);

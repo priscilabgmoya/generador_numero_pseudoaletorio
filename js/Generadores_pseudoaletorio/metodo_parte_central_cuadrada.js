@@ -1,4 +1,4 @@
-import { getCentro, parsearNro } from "../helpers/helps.js";
+import { getCentro, parsearNro } from "../../helpers/helps.js";
 
 function metodoParteCentralCuadrada(m,n,repeticiones){
    let resultados = []
