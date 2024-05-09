@@ -1,7 +1,7 @@
 export function truncar(numero){
     let cadenaNumero = numero.toString();
     let indexComa = cadenaNumero.indexOf('.');
-    let tresDecimales = cadenaNumero.substring(0, indexComa + 4);
+    let tresDecimales = cadenaNumero.substring(0, indexComa + 6);
     return tresDecimales; 
 }
 export function getCentro(string){

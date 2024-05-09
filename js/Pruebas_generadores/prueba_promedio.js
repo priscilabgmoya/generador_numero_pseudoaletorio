@@ -15,8 +15,10 @@ function PruebaPromedio(muestra){
         let promedio = suma/ muestra; 
         let z = ((promedio - (1/2)) * Math.sqrt(muestra)) / Math.sqrt(1/12); 
         console.log(Math.abs(z));
+        return
     }else{
-        console.log("El C elegido no es primo relativo....")
+        console.log("El C elegido no es primo relativo...."); 
+        return PruebaPromedio(muestra); 
     }
 }
 console.log("prueba promedio");

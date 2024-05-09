@@ -7,7 +7,7 @@ export function metodoCongruenciaMixto(a, c, n0, m, repeticiones) {
         let n = ((a * semillas[index]) + c) % m;
         semillas.push(n);
         let u = n / m;
-        if ( u >= 0 && u <= 1) {
+        if ( u >= 0.0 && u <= 1.0) {
                 resultados.push(truncar(u));   
         }else {
             console.log("nro generado fuera del rango aceptado");
