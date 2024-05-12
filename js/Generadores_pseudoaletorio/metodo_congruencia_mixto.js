@@ -1,22 +1,22 @@
-import { truncar } from "../../helpers/helps.js";
+import { generarNumero_a, generarNumero_c, generarNumero_m, sonPrimosRelativos } from "../../helpers/funcionesHelps.js";
 
-export function metodoCongruenciaMixto(a, c, n0, m, repeticiones) {
-    let resultados = [];
-    let semillas = [n0];
-    for (let index = 0; index < repeticiones; index++) {
-        let n = ((a * semillas[index]) + c) % m;
+
+export function metodoCongruenciaMixto(n0,posicion) {
+    let c = generarNumero_c(); 
+    let m = generarNumero_m(); 
+    if(sonPrimosRelativos(c,m)){
+        let presistencia = localStorage.getItem("semillasCmixto");
+        let semillas = presistencia ? JSON.parse(presistencia) : [n0];
+        let n = (( generarNumero_a() * semillas[posicion]) + c) % m;
         semillas.push(n);
         let u = n / m;
-        if ( u >= 0.0 && u <= 1.0) {
-                resultados.push(truncar(u));   
-        }else {
-            console.log("nro generado fuera del rango aceptado");
-            index--;
-        }
-
+        localStorage.setItem("semillasCmixto", JSON.stringify(semillas));
+        return u.toPrecision(4); 
+    }else{
+        return metodoCongruenciaMixto(n0,posicion); 
     }
-    return { resultados };
 }
+
 /**
  * primer error encontrado, cuando se utiliza un m grande se tiene que validar que el u generado se encuentre entre 0 y 1
  * y hacer que el recorrido cuando encuentre un u fuera del rango vuelva un paso atras

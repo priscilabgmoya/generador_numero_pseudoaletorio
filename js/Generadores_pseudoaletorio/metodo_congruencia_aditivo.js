@@ -1,6 +1,7 @@
 import { truncar } from "../../helpers/helps.js";
 
 function metodoCongruenciaAditivo(semillasInicial, m , k, repeticiones){
+    debugger
     let resultados = []; 
     let semillas =[...semillasInicial] ; 
     let posicion = 0; 
@@ -22,7 +23,7 @@ function metodoCongruenciaAditivo(semillasInicial, m , k, repeticiones){
 }
 let semillas = [567,561]; 
 let k =  semillas.length-1; 
-let resultados = metodoCongruenciaAditivo(semillas, 783, k,20); 
+let resultados = metodoCongruenciaAditivo(semillas, 783, k,6); 
 console.log("metodo de Congruencial Aditivo");
 resultados.forEach((res,index)=>{
     console.log(`u[${index+1}]: ${res}`);

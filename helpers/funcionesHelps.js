@@ -11,5 +11,12 @@ export function generarNumero_a() {
     if (numero % 2 === 0) { // Si es par
         numero++; // Incrementamos en uno para hacerlo impar
     }
-    return numero% 20 ===1 ? numero : generarNumero_a();
+    return numero% 3 !==0  && numero % 5 !== 0 ? numero : generarNumero_a();
+}
+export function generarNumero_c() {
+    let numero = Math.round(Math.random() * 1000); // Multiplicamos por 1000 para obtener un número grande
+    return numero; 
+}
+export function generarNumero_m() {
+    return Math.pow(2,32); 
 }
