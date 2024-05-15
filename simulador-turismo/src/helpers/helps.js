@@ -19,3 +19,25 @@ export function restNro(nro, k){
     let second = parseInt(newArray.slice(k, newArray.length).join(""));
    return {first: first, second: second}; 
 }
+
+export function generarID() {
+    return '_' + Math.random().toString(36).substr(2, 9);
+}
+
+export default function generarDias() {
+    let arrayDias = [];
+
+// Cantidad total de días
+const cantidadDias = 59;
+
+// Generar objetos para cada día
+for (let i = 1; i <= cantidadDias; i++) {
+  let dia = {
+    id: generarID(),
+    numeroDia: i,
+    opcion: "Cantidad de Días: " + i
+  };
+  arrayDias.push(dia);
+}
+return{arrayDias}; 
+}

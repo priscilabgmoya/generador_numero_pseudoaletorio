@@ -1,7 +1,6 @@
 import { truncar } from "../../helpers/helps.js";
 
 function metodoCongruenciaAditivo(semillasInicial, m , k, repeticiones){
-    debugger
     let resultados = []; 
     let semillas =[...semillasInicial] ; 
     let posicion = 0; 
