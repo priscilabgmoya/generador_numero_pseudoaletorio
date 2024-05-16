@@ -3,7 +3,7 @@ import Poisson from "../metodos/poisson.js";
 import CalcularColectivo from "./CalcularColectivos.js";
 import CalcularTuristas from "./CalcularTuristas.js";
 export default function SimularTurista(cantidadDia, addInfo) {
-    let turistas = 0, totalTuristas = 0, souveniTotal = 0;
+    let turistas = 0, totalTuristas = 0, souveniTotal = 0, resultado=[], total ={};
     for (let dia = 0; dia < cantidadDia; dia++) {
         let cantidadColecValle = 0, cantidadColecChorromoro = 0, souvenirDia = 0;
         turistas = Poisson(4186, turistas);
@@ -24,12 +24,13 @@ export default function SimularTurista(cantidadDia, addInfo) {
             colectivoChorromoro: cantidadColecChorromoro,
             souvenirDia: souvenirDia
         }
-        let total = {
+       total = {
             totalTuristas: totalTuristas,
             souveniTotal: souveniTotal,
         }
         console.log(data);
-        addInfo(data,total);
+        resultado.push(data); 
     }
+    addInfo(resultado,total);
 }
 //localStorage.clear();

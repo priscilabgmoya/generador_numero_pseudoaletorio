@@ -21,11 +21,12 @@ const handleChange =(value) =>{
     setDias(arrayDias); 
     setResultados([]); 
     setTotal(null); 
+    localStorage.clear(); 
   }
 }
 const addInfo= (value, total) =>{
   setTotal(total); 
-  setResultados([...resultados, value]); 
+  setResultados([...resultados, ...value]); 
 }
 const deleteInfo= (id) =>{
   setResultados(resultados.filter(data=>{return data.id !== id})); 
@@ -50,14 +51,12 @@ const simular =() =>{
     />
     <Button variant="contained" color='error' onClick={simular}>SIMULAR</Button>
       </Box>
-      
-      <Box sx={{display:"flex" , justifyContent: "space-between" , overflowY:"auto", alignItems:"center" , gap: 2 ,m:1 , height: 400 , flexDirection: "column", flexWrap:"wrap"}}>
       {
         total &&  <Typography variant='h6'> {`Total de Turistas: ${total.totalTuristas} - Total de Souvenir: ${total.souveniTotal}`} </Typography>
       }
+      <Box sx={{display:"flex" , justifyContent: "space-between" , overflowY:"auto", alignItems:"center" , gap: 2 ,m:1 , height: 400 , flexDirection: "row", flexWrap:"wrap"}}>
       {
         resultados.map((data, index)=>{
-          console.log(data)
           return <MediaCardData data={data} key={index} deleteData={deleteInfo} />
         })
       }
